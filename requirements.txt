@@ -1,0 +1,5 @@
+aiohttp
+# google-agent-development-kit==1.0.0 (Internal/Future Dependency)
+# github-copilot-sdk (Internal/Future Dependency)
+# copilot-fleet-orchestrator (Internal/Future Dependency)
+# mcp-client (Internal/Future Dependency)

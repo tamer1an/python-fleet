@@ -1,0 +1,42 @@
+{
+  "name": "system-orchestration",
+  "version": "1.0.0",
+  "description": "Progressive disclosure skill for optimizing agent context windows and coordinating tasks across the Enterprise AI Fleet.",
+  "author": "Enterprise AI Architecture",
+  "format": "agentskills.io/v1",
+  "skill": {
+    "L1_Metadata": {
+      "id": "skill-system-orchestration",
+      "summary": "Orchestrates complex cross-system AI workflows asynchronously. Discloses further details only upon specific invocation.",
+      "triggers": ["orchestrate", "coordinate fleet", "manage workflow"],
+      "mcp_namespaces": ["fleet://orchestration"]
+    },
+    "L2_Instructions": {
+      "progressive_loading": true,
+      "directives": [
+        "1. Start by analyzing the overarching objective without loading deep context.",
+        "2. Break down the objective into discrete, asynchronously manageable sub-tasks.",
+        "3. Delegate sub-tasks to specialized Copilot Fleet agents using standardized MCP resources.",
+        "4. Await asynchronous task completion and aggregate responses.",
+        "5. Request L3 Resources only if an agent encounters an error or requires deep contextual knowledge to proceed."
+      ]
+    },
+    "L3_Resources": {
+      "on_demand_fetching": true,
+      "mcp_endpoints": [
+        {
+          "name": "Architecture Guidelines",
+          "uri": "mcp://docs/enterprise/architecture"
+        },
+        {
+          "name": "Copilot Fleet SDK Reference",
+          "uri": "mcp://docs/sdk/copilot-fleet"
+        },
+        {
+          "name": "Google ADK Internal Schemas",
+          "uri": "mcp://docs/sdk/google-adk/schemas"
+        }
+      ]
+    }
+  }
+}
